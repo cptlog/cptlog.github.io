@@ -1,0 +1,103 @@
+/* MAIN PAGE ONLY */
+
+/* general */
+
+:root {
+    --bodybg: #303030;
+    --containerbg: #181818;
+    --text: #ddd;
+    --accent: #8ec732;
+    --quicktransition: .3s ease-in-out;
+    --padding: 15px 15px 20px 15px;
+    --buttonpadding: 10px;
+    --radius: 5px; 
+    --containerborder: 3px solid;
+}
+
+body {
+    background: var(--bodybg) url('../media/8px_grain.png') repeat;
+    color: var(--text);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent);
+    transition: var(--quicktransition);
+    border-bottom: 1px solid transparent;
+}
+
+a:hover {
+    color: var(--text);
+    border-bottom: 1px solid var(--accent);
+}
+
+.container {
+    background: var(--containerbg);
+    border-radius: var(--radius);
+    padding: var(--padding);
+}
+
+/* containers */
+
+.app {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: max-content auto;
+    grid-template-areas: 'header header header header header';
+    gap: 20px;
+    padding: 20px;
+}
+
+.header {
+    grid-area: header;
+    font-size: 1.8em;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-transform: uppercase;
+    border-right: var(--containerborder) var(--accent);
+    border-left: var(--containerborder) var(--accent);
+    padding: var(--padding);
+}
+
+.left {
+    grid-column: 1 / 2;
+}
+
+.center {
+    grid-column: 2 / 6;
+}
+
+/* specifics, misc */
+
+.navigation {
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    list-style-type: none;
+}
+
+.navigation a {
+    display: inline-block;
+    margin: 0 10px 0 0;
+    padding: var(--buttonpadding);
+    border-radius: var(--radius);
+    border-bottom: none;
+    border-left: var(--containerborder) transparent;
+    border-right: var(--containerborder) transparent;
+    background: var(--containerbg);
+}
+
+.navigation a:hover {
+    border-left: var(--containerborder) var(--accent);
+    border-right: var(--containerborder) var(--accent);
+}
+
+/* accessibility & responsiveness */
+
+@media (prefers-reduced-motion: no-preference) {
+    /* animations here */
+}
