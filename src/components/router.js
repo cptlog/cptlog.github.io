@@ -3,7 +3,7 @@ import { Switch, Route, Router } from 'wouter'
 import Home from '../pages/home'
 import About from '../pages/about'
 
-const Router = () => {
+const PageRouter = () => {
     return (
         <Switch>
             <Route path='/' component={Home} />
@@ -12,4 +12,4 @@ const Router = () => {
     )
 }
 
-export default Router
+export default PageRouter
