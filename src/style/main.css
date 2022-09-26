@@ -4,11 +4,12 @@
 
 :root {
     --bodybg: #303030;
-    --containerbg: #181818;
+    --containerbg: #141414;
+    --darkercontainer: #0c0c0c;
     --text: #ddd;
     --accent: #8ec732;
     --quicktransition: .3s ease-in-out;
-    --padding: 15px 15px 20px 15px;
+    --padding: 15px 15px 19px 15px;
     --buttonpadding: 10px;
     --radius: 5px; 
     --containerborder: 3px solid;
@@ -31,6 +32,10 @@ a:hover {
     border-bottom: 1px solid var(--accent);
 }
 
+.accent {
+    color: var(--accent);
+}
+
 .container {
     background: var(--containerbg);
     border-radius: var(--radius);
@@ -51,14 +56,17 @@ a:hover {
 
 .header {
     grid-area: header;
-    font-size: 1.8em;
+    font-size: 1.9em;
     font-weight: 600;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.5em;
     text-align: center;
     text-transform: uppercase;
+    font-style: italic;
     border-right: var(--containerborder) var(--accent);
     border-left: var(--containerborder) var(--accent);
     padding: var(--padding);
+    color: var(--accent);
+    background: var(--darkercontainer);
 }
 
 .left {
@@ -72,11 +80,17 @@ a:hover {
 /* specifics, misc */
 
 .category {
+    text-transform: uppercase;
+    font-weight: 600;
     margin: 10px 0;
     padding: var(--buttonpadding);
-    border-left: var(--containerborder) var(--accent);
     border-radius: var(--radius);
-    background: var(--containerbg);
+    background: var(--darkercontainer);
+    color: var(--accent);
+}
+
+.category:first-of-type {
+    margin: 0 0 10px 0;
 }
 
 .navigation {
@@ -102,6 +116,28 @@ a:hover {
 .navigation ul a:hover {
     border-left: var(--containerborder) var(--accent);
     border-right: var(--containerborder) var(--accent);
+}
+
+.card {
+    display: flex;
+}
+
+.card img {
+    max-width: 280px;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.card .name {
+    font-size: 1.5em;
+}
+
+.card .name2 {
+    font-size: 1.2em;
 }
 
 /* accessibility & responsiveness */
